@@ -6,8 +6,8 @@
 
   | | 説明 | 備考 |
   | :-- | :-- | :-- |
-  | [ruby_notes](https://github.com/miolab/ruby_rails_memo/tree/master/ruby_notes) | Ruby本体のメソッドや作法などのmdメモやrbファイルなど置き場 | |
-  | rails_notes | 整理中 | |
+  | [ruby_notes/](https://github.com/miolab/ruby_rails_memo/tree/master/ruby_notes) | Ruby本体のメソッドや作法などのmdメモやrbファイルなど置き場 | |
+  | [rails_notes/](https://github.com/miolab/ruby_rails_memo/tree/master/rails_notes) | 整理中 | |
 
 
 
