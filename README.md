@@ -4,12 +4,20 @@
 
 - __Ruby__ および __Ruby on Rails__ 開発に関する覚え書きを、メモとして残していきます。
 
+  | | 説明 | 備考 |
+  | :-- | :-- | :-- |
+  | [ruby_notes](https://github.com/miolab/ruby_rails_memo/tree/master/ruby_notes) | Ruby本体のメソッドや作法などのmdメモやrbファイルなど置き場 | |
+  | rails_notes | 整理中 | |
+
+
+
 - 実行環境
   - macOS (10.14.6)
   - VSCode
   - Ruby (2.7.1)
   - Rails (5 / 6)
   - rbenv (1.1.2)
+  - gem (3.1.2)
 
 ---
 
@@ -68,7 +76,7 @@
 
   インストール & 使用バージョン指定
 
-  ```
+  ```terminal
   $ rbenv install 2.7.1
 
   $ rbenv rehash
