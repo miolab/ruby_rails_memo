@@ -15,6 +15,25 @@ judge_animal =  case animal
 
 puts judge_animal
 
+
+puts "################"
+
+
+# 関数化
+def cry(animal)
+  case animal
+  when "dog"
+    "wan"
+  when "cat"
+    "nyan"
+  else
+    "not found"
+  end
+end
+
+puts cry("cat")
+
+
 puts "################"
 
 
@@ -30,6 +49,7 @@ judge_food =  case food
               end
 
 puts judge_food
+
 
 puts "################"
 
