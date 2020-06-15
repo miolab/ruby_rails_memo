@@ -93,7 +93,7 @@
 
 ---
 
-# [WIP] Ruby on Rails
+# [WIP] :closed_book: Ruby on Rails
 
 - インストール
 
@@ -132,36 +132,40 @@
     Rails 5.2.4.3
     ```
 
+  ディレクトリ移動
+
   ```terminal
   $ cd project_name
   ```
 
-  - `Gemfile` 書き換え
+- `Gemfile` 書き換え
 
-    ```ruby
-    .
-    .
-    # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-    gem 'rails', '5.2.4.3'  --> change
-    # Use sqlite3 as the database for Active Record
-    gem 'sqlite3', '~> 1.3.6'  --> change
-    .
-    .
-    ```
+  ```ruby
+  .
+  .
+  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+  gem 'rails', '5.2.4.3'  --> change
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '~> 1.3.6'  --> change
+  .
+  .
+  ```
+
+  アップデート
 
   ```ruby
   $ bundle update
   ```
 
-  - ブラウザで確認
+- ブラウザで確認
 
-    ```ruby
-    $ rails s
-    ```
+  ```ruby
+  $ rails s
+  ```
 
-    - `http://localhost:3000/` 起動
+  - `http://localhost:3000/` 起動
 
-      <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
+    <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
 
 
   .
