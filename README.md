@@ -105,18 +105,11 @@
 
   - バージョン指定する場合は以下。（例：5系）
 
-    ```
+    ```ruby
     $ gem install rails -v 5.2.1 -N
     ```
 
     `-N`: ドキュメントを省略し、DL時間を短縮する
-
-  - 確認
-
-    ```terminal
-    $ rails -v
-    Rails 6.0.3.1
-    ```
 
 - セットアップ
 
@@ -132,15 +125,43 @@
     $ rails _5.2.1_ new project_name
     ```
 
+  - 確認
+
+    ```terminal
+    $ rails -v
+    Rails 5.2.4.3
+    ```
+
   ```terminal
   $ cd project_name
   ```
 
+  - `Gemfile` 書き換え
 
+    ```ruby
+    .
+    .
+    # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+    gem 'rails', '5.2.4.3'  --> change
+    # Use sqlite3 as the database for Active Record
+    gem 'sqlite3', '~> 1.3.6'  --> change
+    .
+    .
+    ```
 
+  ```ruby
+  $ bundle update
+  ```
 
+  - ブラウザで確認
 
+    ```ruby
+    $ rails s
+    ```
 
+    - `http://localhost:3000/` 起動
+
+      <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
 
 
   .
