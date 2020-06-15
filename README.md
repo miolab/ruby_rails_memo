@@ -157,13 +157,19 @@
   $ bundle update
   ```
 
+  データベース作成
+
+  ```ruby
+  $ rails db:create
+  ```
+
 - ブラウザで確認
 
   ```ruby
   $ rails s
   ```
 
-  - `http://localhost:3000/` 起動
+  - [`http://localhost:3000/`](http://localhost:3000/) 起動
 
     <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
 
