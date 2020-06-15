@@ -93,7 +93,63 @@
 
 ---
 
+# [WIP] Ruby on Rails
 
+- インストール
+
+  所望のディレクトリ配下にいる状態で、
+
+  ```ruby
+  $ gem install rails
+  ```
+
+  - バージョン指定する場合は以下。（例：5系）
+
+    ```
+    $ gem install rails -v 5.2.1 -N
+    ```
+
+    `-N`: ドキュメントを省略し、DL時間を短縮する
+
+  - 確認
+
+    ```terminal
+    $ rails -v
+    Rails 6.0.3.1
+    ```
+
+- セットアップ
+
+  ```ruby
+  $ rails new project_name
+  ```
+
+  - 上記は最新版Railsをセットアップ。
+
+  - 明示的にバージョン指定する場合は以下。（例：5系）
+
+    ```ruby
+    $ rails _5.2.1_ new project_name
+    ```
+
+  ```terminal
+  $ cd project_name
+  ```
+
+
+
+
+
+
+
+
+  .
+
+  .
+
+  .
+
+---
 ---
 
 # （補記）AWS `Cloud9` による開発環境構築
