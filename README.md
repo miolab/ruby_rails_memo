@@ -171,7 +171,7 @@
 
   - [`http://localhost:3000/`](http://localhost:3000/) 起動
 
-    <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
+    <img width="582" alt="スクリーンショット" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
 
 ## Controller 作成
 
@@ -201,6 +201,7 @@
 
   [http://localhost:3000/users/index](http://localhost:3000/users/index)
 
+  <img width="179" alt="スクリーンショット" src="https://user-images.githubusercontent.com/33124627/84762809-3ee97100-b006-11ea-8713-c97246252118.png">
 
 
 
