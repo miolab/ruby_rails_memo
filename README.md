@@ -173,6 +173,46 @@
 
     <img width="582" alt="スクリーンショット 2020-06-15 22 03 24" src="https://user-images.githubusercontent.com/33124627/84660630-16a13a00-af54-11ea-8bc6-f733191ecae2.png">
 
+## Controller 作成
+
+最低限 `Controller` があれば、ハローワールドはできる。
+
+- Controller 用意
+
+  ```ruby
+  $ rails g controller users index
+  ```
+
+  - `rails g（generate） controller コントローラー名（複数形を推奨） コントローラークラス内に定義するメソッド名（=アクション）`
+
+- `hello > app > controllers > concerns > users_controller.rb` を編集
+
+  ```ruby
+  class UsersController < ApplicationController
+    def index
+      render plain: "Hello, im."    --> add
+    end
+  end
+  ```
+
+  - plain = __平文のテキスト__
+
+- `$ rails s` でブラウザ起動し、結果確認
+
+  [http://localhost:3000/users/index](http://localhost:3000/users/index)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .
 
