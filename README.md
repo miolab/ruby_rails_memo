@@ -256,6 +256,46 @@
 
   `$ rails s` して、[http://localhost:3000/users/](http://localhost:3000/users/) でブラウザ確認。
 
+## View 設定
+
+- __ERB__
+  - Embedded RuBy（埋め込みRuby）
+  - __テンプレートエンジン__。PythonでいうJinjaみたいなもの。
+    - 他のRailsテンプレートエンジンとして、_slim_ などがある
+
+### 実装
+
+- `app > controllers > users_controller.rb`
+
+  ```ruby
+    class UsersController < ApplicationController
+      def index
+        # render plain: "Hello,im!!"    --> delete
+      end
+    end
+  ```
+
+- `hello > app > views > users > index.html.erb`
+
+  ```html
+  <%# <h1>Users#index</h1>    --> comment out
+      <p>Find me in app/views/users/index.html.erb</p> %>  --> comment out
+
+  <h1>Hello, im view!</h1>
+  <p><%= 10 + 1 %></p>
+  ```
+
+  - `<%= .... %>` は、Rubyコードの埋め込み記法。
+
+    - __%__ に __=__ を付けたら画面表示させる。（ __=__ 付けないのは、`if` など処理系を使うとき）
+
+確認（[http://localhost:3000/users/index](http://localhost:3000/users/index)）
+
+<img width="359" alt="スクリーンショット 2020-06-18 8 27 38" src="https://user-images.githubusercontent.com/33124627/84960824-a524df80-b13d-11ea-9404-e1cc91de10b1.png">
+
+
+
+
 
 
 
