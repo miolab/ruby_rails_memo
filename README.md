@@ -201,16 +201,60 @@
 
   [http://localhost:3000/users/index](http://localhost:3000/users/index)
 
-  <img width="179" alt="スクリーンショット" src="https://user-images.githubusercontent.com/33124627/84762809-3ee97100-b006-11ea-8713-c97246252118.png">
+  <img width="370" alt="スクリーンショット" src="https://user-images.githubusercontent.com/33124627/84762809-3ee97100-b006-11ea-8713-c97246252118.png">
 
+## Routing 設定
 
+- `routes` 確認
 
+  __URL__ と __action__ の _対応表_ みたいなもの
+  （何が何を呼ぶか、を確認する）
 
+  ```ruby
+  $ rails routes
+  .
+  .
+                    Prefix Verb URI Pattern                                                                              Controller#Action
+                users_index GET  /users/index(.:format)                                                                   users#index
+        rails_service_blob GET  /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+  rails_blob_representation GET  /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+        rails_disk_service GET  /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+  update_rails_disk_service PUT  /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+      rails_direct_uploads POST /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+  ```
 
+  - `$ rake routes` でも可（`$ rails routes` と同じ）
 
+- `routes` の書き換え
 
+  `hello > config > routes.rb`
 
+  ```ruby
+  Rails.application.routes.draw do
+    # get 'users/index'    --> comment out
+    get 'users', to: 'users#index'    --> add
+  ```
 
+  - 上記 `routes` 設定により、[http://localhost:3000/users/](http://localhost:3000/users/) で _.../users/index_ を読み込めるようにした
+
+    - `get 'users/index'` と `get 'users/index', to: 'users#index'` は同じ意味になる
+
+  - 設定変更後の `routes` を確認
+
+    ```ruby
+    $ rake routes
+    .
+    .
+                      Prefix Verb URI Pattern                                                                              Controller#Action
+                        users GET  /users(.:format)                                                                         users#index
+          rails_service_blob GET  /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+    rails_blob_representation GET  /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+          rails_disk_service GET  /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+    update_rails_disk_service PUT  /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+        rails_direct_uploads POST /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
+    ```
+
+  `$ rails s` して、[http://localhost:3000/users/](http://localhost:3000/users/) でブラウザ確認。
 
 
 
