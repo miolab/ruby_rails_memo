@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    # render plain: "Hello,im!!"
+    @num = 1 + 10
   end
 end

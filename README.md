@@ -95,6 +95,31 @@
 
 # [WIP] :closed_book: Ruby on Rails
 
+## 概要
+
+- 理念
+
+  - 設定より規約（Convention over Configuration）
+
+    - 命名規約における複数形など
+
+  - DRY原則
+
+- MVC
+
+  | | 説明 |
+  | :-- | :-- |
+  | View | 画面の描画 |
+  | Model | データ関連の処理 |
+  | Controller | 制御（ModelとViewとの橋渡し） |
+
+- 参考
+  - [Ruby on Rails ガイド](https://railsguides.jp/)
+  - [Ruby on Rails Guides](https://guides.rubyonrails.org/)
+  - [Ruby on Rails Org](https://rubyonrails.org/)
+
+## セッティング
+
 - インストール
 
   所望のディレクトリ配下にいる状態で、
@@ -277,9 +302,11 @@
 
 - `hello > app > views > users > index.html.erb`
 
+  （規約） __`app > views > コントローラー名 > アクション名.html.erb`__
+
   ```html
   <%# <h1>Users#index</h1>    --> comment out
-      <p>Find me in app/views/users/index.html.erb</p> %>  --> comment out
+      <p>Find me in app/views/users/index.html.erb</p> %>  --> delete
 
   <h1>Hello, im view!</h1>
   <p><%= 10 + 1 %></p>
@@ -289,9 +316,35 @@
 
     - __%__ に __=__ を付けたら画面表示させる。（ __=__ 付けないのは、`if` など処理系を使うとき）
 
-確認（[http://localhost:3000/users/index](http://localhost:3000/users/index)）
+- 確認（[http://localhost:3000/users/index](http://localhost:3000/users/index)）
 
-<img width="359" alt="スクリーンショット 2020-06-18 8 27 38" src="https://user-images.githubusercontent.com/33124627/84960824-a524df80-b13d-11ea-9404-e1cc91de10b1.png">
+  <img width="359" alt="スクリーンショット 2020-06-18 8 27 38" src="https://user-images.githubusercontent.com/33124627/84960824-a524df80-b13d-11ea-9404-e1cc91de10b1.png">
+
+
+### （リファクタリング）__`Controller` でロジックを書いて `View`__ に渡す
+
+- `app > controllers > users_controller.rb`
+
+  ```ruby
+  class UsersController < ApplicationController
+    def index
+      @num = 1 + 2    # --> add
+    end
+  end
+  ```
+
+  - `@hoge` は、__インスタンス変数__。
+    - クラスのインスタンス前に保持される変数
+    - __Viewから参照ができる（Viewに渡せる）__
+    - __@__ 付けないと、name errorになる
+
+
+- `hello > app > views > users > index.html.erb`
+
+  ```html
+  <h1>Hello, im view!</h1>
+  <p><%= @num %></p>
+  ```
 
 
 
